@@ -15,7 +15,7 @@ class DeviceManager extends EventEmitter {
    * @param {Integer}   options.port    Port to listen
    * @param {String}    options.path    Path to listen
    * @param {Object}    options.handshake Options for connection hanshake
-   * @param {Integer}     options.handshae.timeout Timeout to reach a successfull handshake
+   * @param {Integer}     options.handshake.timeout Timeout to reach a successfull handshake
    * @param {String}      options.hanshake.algorithm   Algorithm for hmac
    * @param {Integer}     options.hanshake.nonce_size  Size for nonce
    * @param {Object}    options.connections Options for new connections
