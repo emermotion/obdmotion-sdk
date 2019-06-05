@@ -1,6 +1,6 @@
 'use strict';
 
-const DeviceManager = require('./DeviceManager/device_manager.js');
+const DeviceManager = require('../lib/device_manager.js');
 
 const configuration = {
   port: 7000,
