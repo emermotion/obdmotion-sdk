@@ -225,9 +225,9 @@ TBD
 | SEL_ON_SAMPLE (3) | Values are sampled at a fixed period and packed into arrays |
 
 * Notes
-  (1) Request/response mode. Also available with on_change and on_sample mode.
-  (2) Auto response mode. Not available for ctrl type.
-  (3) Auto response mode. Only available for data type.
+  1. Request/response mode. Also available with on_change and on_sample mode.
+  2. Auto response mode. Not available for ctrl type.
+  3. Auto response mode. Only available for data type.
 
 #### Data parameters
 | Key | SEL_ON_SAMPLE period | SEL_ON_SAMPLE max | SEL_ON_CHANGE threshold |
