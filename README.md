@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Obdmotion Protocol expecification](#obdmotion-protocol-specification-docs)
+- [Obdmotion Protocol specification](#obdmotion-protocol-specification-docs)
 - [Obdmotion SDK docs](#obdmotion-sdk-docs)
 
 ## Introduction
