@@ -224,7 +224,8 @@ TBD
 | SEL_ON_CHANGE (2) | Values are sent only if change occurs |
 | SEL_ON_SAMPLE (3) | Values are sampled at a fixed period and packed into arrays |
 
-  (1) Request/response mode. Also available with on_change and on_sample mode
+* Notes
+  (1) Request/response mode. Also available with on_change and on_sample mode.
   (2) Auto response mode. Not available for ctrl type.
   (3) Auto response mode. Only available for data type.
 
