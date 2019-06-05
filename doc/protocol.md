@@ -220,9 +220,9 @@ TBD
 | mode | description |
 | ---- | ----------- |
 | SEL_OFF | Resource disabled |
-| SEL_ON_DEMAND (1) | Values need to be requested manuallly |
-| SEL_ON_CHANGE (2) | Values are sent only if change occurs |
-| SEL_ON_SAMPLE (3) | Values are sampled at a fixed period and packed into arrays |
+| SEL_ON_DEMAND (i) | Values need to be requested manuallly |
+| SEL_ON_CHANGE (iii) | Values are sent only if change occurs |
+| SEL_ON_SAMPLE (iii) | Values are sampled at a fixed period and packed into arrays |
 
 * Notes
   1. Request/response mode. Also available with on_change and on_sample mode.
@@ -242,9 +242,9 @@ TBD
 | fuel_level | 120s | 10 | ±5%                 |
 | fuel_rate  | 2s   | 25 | ±0.5L/h             |
 
-## ANNEX
+## Annex
 
-### RESPONSE CODES
+### Response Codes
 | Code | Meaning |
 | ---- | ------- |
 | 0  | OK       |
@@ -269,7 +269,7 @@ TBD
 | 20 | reserved |
 
 
-## EXAMPLES
+## Examples
 ### Session start
 ```
 <= {"type":"hello","public_key":"7dtCt_12"}
