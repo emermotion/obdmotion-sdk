@@ -158,7 +158,7 @@ Response `timestamp` can be configured to be `UTC` or `GMT`. The format can also
 | id   | message id [0-255]                   |
 | type | response type (e.g. data)            |
 | key  | resource identifier (e.g. speed)     |
-| code | response status code                 |
+| code | (optional) response status code      |
 | time | timestamp                            |
 | val  | (optional) resource value (e.g. 125) |
 
@@ -196,7 +196,7 @@ Response `timestamp` can be configured to be `UTC` or `GMT`. The format can also
 | system   | vehicle system status   | 0-Sleep<br/>1-Active                             |
 | ignition | vehicle ignition        | 0-Off<br/>1-On                                   |
 | engine   | vehicle engine status   | 0-Off<br/>1-On                                   |
-| diag     | vehicle diag status     | 0-Not detected<br/>1-Detected<br/>2-Locked       |
+| diag     | vehicle diag status     | 0-Not detected<br/>1-Detected                    |
 | body     | vehicle body status     | 0-Calm<br/>1-Tamper<br/>2-Knock<br/>3-Knock down |
 | move     | vehicle movement status | 0-Stopped<br/>1-Moving                           |
 
@@ -247,26 +247,11 @@ TBD
 ### Response Codes
 | Code | Meaning |
 | ---- | ------- |
-| 0  | OK       |
-| 1  | OK_AUTO  |
-| 3  | reserved |
-| 4  | reserved |
-| 5  | reserved |
-| 6  | reserved |
-| 7  | reserved |
-| 8  | reserved |
-| 9  | reserved |
-| 10 | ERROR    |
-| 11 | ERROR_NOT_SUPPORTED |
-| 12 | ERROR_NOT_SELECTED  |
-| 13 | ERROR_NOT_AVAILABLE |
-| 14 | reserved |
-| 15 | reserved |
-| 16 | reserved |
-| 17 | reserved |
-| 18 | reserved |
-| 19 | reserved |
-| 20 | reserved |
+| 0 | OK                  |
+| 1 | ERROR               |
+| 2 | ERROR_NOT_SUPPORTED |
+| 3 | ERROR_NOT_SELECTED  |
+| 4 | ERROR_NOT_AVAILABLE |
 
 
 ## Examples
