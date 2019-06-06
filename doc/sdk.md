@@ -26,21 +26,25 @@ This class uses a `WebSocket` Server to implement all the Obdmotion features. It
 ### new DeviceManager(options)
 
   - `options` {Object} Options for server creation.
-    - `port` {Integer} Port to listen.
+    - `port` {Number} Port to listen.
     - `path` {String} Path to listen.
-    - `handshake` {Object} Options for connection's handshake.
-      - `timeout` {Integer} Timeout to reach a successfull handshake.
-      - `algorithm` {String} Algorithm for hmac.
-      - `nonce_size` {Integer} Size of nonce.
+    - `find_device` {Function} Function to verify devices
     - `connections` {Object} Options for incoming connections.
-      - `timeout` {Integer} Timeout for devices connections.
+      - `timeout` {Number} Timeout for devices connections.
       - `messages` {Object} Options for incoming connections messages.
-      - `timeout` {Integer} Timeout for message's response.
-      - `queue_limit` {Integer} Maximum pending messages.
+      - `timeout` {Number} Timeout for message's response.
+      - `queue_limit` {Number} Maximum pending messages.
+
+`find_device` callback must provide two items:
+  - `error` {Object}
+  - `device` {Object}
+    - `id` {Number}
+    - `public_key` {String}
+    - `private_key` {String}
 
 ### Event: 'close'
 
-Emitted when the server closes. This event depends on the `'close'` event of
+Emitted when the server closes. This event depends on the `close` event of
 WebSocket Server only when it is created internally.
 
 ### Event: 'connection'
@@ -67,17 +71,17 @@ This class implements an Obdmotion device connection. It extends the `EventEmitt
 
 ### new DeviceConnection(options)
 
-  - `id` {Integer} Connection Id.
-  - `device` {Integer} Device Id.
+  - `id` {Number} Connection Id.
+  - `device` {Number} Device Id.
   - `_socket` {Object} Connections websocket.
   - `ip_address` {String} Connection IP address.
   - `_messages` {Object} Current connection's messages.
-    - `counter` {Integer} counter New message id.
-    - `timeout` {Integer} timeout Response timeout for messages.
-    - `limit` {Integer} limit Max size for messages list.
-  - `timeout` {Integer} Connection timeout.
+    - `counter` {Number} counter New message id.
+    - `timeout` {Number} timeout Response timeout for messages.
+    - `limit` {Number} limit Max size for messages list.
+  - `timeout` {Number} Connection timeout.
   - `_timeout_handler` {Object} Timeout handler.
-  - `_last_id` {Integer} Last message's id.
+  - `_last_id` {Number} Last message's id.
 
 ### Event: 'close'
 
