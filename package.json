@@ -1,0 +1,13 @@
+{
+  "name": "obdmotion-sdk",
+  "version": "1.0.0",
+  "description": "Obdmotion Server SDK",
+  "homepage": "https://www.obdmotion.com",
+  "repository": "emermotion/obdmotion-sdk",
+  "author": "Jesús Márquez Galán <marquezx19@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "ws": "^7.0.0"
+  }
+}

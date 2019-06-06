@@ -1,15 +1,28 @@
 'use strict';
 
-const DeviceManager = require('../lib/device_manager.js');
+const DeviceManager = require('..');
+const db = require('./db.json');
+
+function find_device(public_key, callback){
+  if(typeof(callback) != 'function'){
+    return;
+  }
+
+  var i = 0;
+  var keys = Object.keys(db);
+  while( i < keys.length && db[keys[i]].public_key != public_key ) i++;
+
+  if(i==keys.length){
+    callback('Unkown');
+  } else {
+    callback(null, db[keys[i]]);
+  }
+}
 
 const configuration = {
   port: 7000,
   path: "/",
-  handshake: {
-    timeout: 90000,
-    algorithm: "sha1",
-    nonce_size: 24
-  },
+  find_device: find_device,
   connections: {
     timeout: 720000,
     messages: {
