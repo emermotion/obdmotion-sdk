@@ -7,7 +7,7 @@
 - [Obdmotion SDK docs](#obdmotion-sdk-docs)
 
 ## Introduction
-Obdmotion is a tool designed and made by Emermotion that provices a friendly way to collect data and interact remotely with every kind of automobile.
+Obdmotion is a tool designed and made by Emermotion that provides a friendly way to collect data and interact remotely with every type of vehicle.
 
 ## Obdmotion Protocol specification docs
 See [`/doc/protocol.md`](./doc/protocol.md).
