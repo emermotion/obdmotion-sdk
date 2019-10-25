@@ -36,6 +36,10 @@ var device_manager = new DeviceManager(configuration);
 
 var tracks = {};
 
+device_manager.on('error', function(err){
+  console.error(err);
+});
+
 device_manager.on('connection', function(connection){
   console.info('Device %i > Connected', connection.device);
 
